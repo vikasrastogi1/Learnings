@@ -1,0 +1,5 @@
+Resources:
+  HelloBucket16666666:
+    Type: AWS::S3::Bucket
+    Properties:
+      AccessControl: PublicRead
