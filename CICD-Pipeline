@@ -1,0 +1,23 @@
+node{
+    stage('SCM checkout'){
+        git credentialsId: 'git-cred', url: 'https://github.com/javahometech/my-app'
+    }
+    stage('mvn package'){
+        def MVNhome = tool name: 'maven3.6', type: 'maven'
+        def MVNCMD = "${MVNhome}/bin/mvn"
+        sh "${MVNCMD} clean package"
+    }
+    stage('docker image'){
+        sh 'docker build -t vikasrastogi1/my-app1.0.0 .'
+    }
+    stage('docker push image'){
+        withCredentials([string(credentialsId: 'dk-pwd', variable: 'dockerpwd')]) {
+            sh "docker login -u vikasrastogi1 -p ${dockerpwd}"
+        }
+        sh 'docker push vikasrastogi1/my-app1.0.0'
+    }
+    
+    stage('docker run image'){
+        sh 'docker run -p80:8080 -d --name my-app vikasrastogi1/my-app1.0.0'
+    }
+}
