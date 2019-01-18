@@ -20,3 +20,7 @@ https://www.youtube.com/watch?v=8J0g_xWUzV0
 Reset Jenkins Admin passowrd by commandline
 
 https://www.learnitguide.net/2018/08/reset-jenkins-admin-users-password.html
+
+Linix Commands
+
+https://www.thegeekstuff.com/2010/11/50-linux-commands/
