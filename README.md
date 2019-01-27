@@ -24,3 +24,7 @@ https://www.learnitguide.net/2018/08/reset-jenkins-admin-users-password.html
 Linix Commands
 
 https://www.thegeekstuff.com/2010/11/50-linux-commands/
+
+BDD CUCUMBER / SELENIUM BASICS
+
+https://www.youtube.com/watch?v=Vv7hHrVX_Zg
